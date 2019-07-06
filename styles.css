@@ -1,0 +1,41 @@
+/* CSS Style */
+
+html *,
+html::before,
+html::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+
+.container {
+  position: relative;
+  height: calc(90vh - 100px);
+  background-color: yellow;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  background-color: blueviolet;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50vw;
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+h1 {
+  position: absolute;
+  color: red;
+  z-index: 1;
+  left: 20px;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
